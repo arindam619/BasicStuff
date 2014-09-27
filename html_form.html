@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>HTML Form</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+	<h2>HTML Form</h2>
+	
+	<form>
+		
+		<fieldset>
+			
+			<legend>Login Info</legend>
+			
+			<p>
+				<label for="user_name">User name: </label><br />
+				<input type="text" id="user_name" value="rinku" disabled="disabled" />
+			</p>
+			
+			<p>
+				<label for="pass">Password: </label><br />
+				<input type="password" id="pass" />
+			</p>
+		
+		</fieldset>
+	
+		<p>
+			<label for="candidate_name">Name: </label><br />
+			<input type="text" id="candidate_name" />
+		</p>
+		
+		<p>
+			<label for="about_me">About me: </label><br />
+			<textarea id="about_me"></textarea>
+		</p>
+		
+		<p>
+		   <label>Gender: </label>
+		   <input type="radio" name="gender" /> Male
+		   <input type="radio" name="gender" /> Female
+	   </p>
+	   
+	   <p>
+			<label>Profession: </label>
+			<input type="checkbox" />&nbsp;Web designer
+			<input type="checkbox" />&nbsp;PHP/MySQL developer
+			<input type="checkbox" />&nbsp;jQuery developer
+	   </p>
+	   
+	   
+	   <p>
+			<label for="image">Picture</label><br />
+			<input type="file" id="image" />
+	   
+	   </p>
+	   
+	   <p>
+			<label for"drop_menu">Select your option</label>
+			<select id="drop_menu">
+				<option value="a" >A</option>
+				<option value="b">B</option>
+				<option value="c" selected="selected">C</option>
+			</select>
+	   </p>
+	   
+	   <input type="hidden" value="new-user-form" />
+	   <input type="submit" value="Signup" />
+	
+	</form>
+	
+	
+	
+</body>
+</html>

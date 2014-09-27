@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>HTML Form</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	
+	
+		#head {
+			color: #00FF0F;
+			text-decoration:underline;
+			font-family:times new roman;
+		}
+		
+		p {
+			font-size: 18px;
+			font-family: times new roman;
+			margin-left: 10px;
+		}
+		
+		fieldset {
+		
+			margin-bottom: 1em;
+		
+		}
+		
+		input[type="text"], input[type="password"], textarea {
+			width: 250px;
+			height: 25px;
+			border: 1px solid #B1D2FF;
+			padding-left: 5px;
+		}
+		
+		input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+			background: #EFF6FF;
+		}
+		
+		#about_me {
+			width: 255px;
+			height: 91px;
+			resize: none;
+			padding:5px 4px 5px 4px;
+		}
+		
+	</style>
+	
+	
+	
+	
+</head>
+
+<body>
+
+	<h2 id="head">HTML Form</h2>
+	
+	<form>
+		
+		<fieldset>
+			
+			<legend>Login Info</legend>
+			
+			<p>
+				<label for="user_name">User name: </label><br />
+				<input type="text" id="user_name" value="rinku" />
+			</p>
+			
+			<p>
+				<label for="pass">Password: </label><br />
+				<input type="password" id="pass" />
+			</p>
+		
+		</fieldset>
+		
+	    <fieldset>
+		    <legend>User details :Basic</legend>
+			
+			<p>
+				<label for="candidate_name">Name: </label><br />
+				<input type="text" id="candidate_name" />
+			</p>
+			
+			<p>
+				<label for="about_me">About me: </label><br />
+				<textarea id="about_me"></textarea>
+			</p>
+			
+		</fieldset>
+		
+		<fieldset>
+		    <legend>User details: Additional</legend>
+			
+			<p>
+			   <label>Gender: </label>
+			   <input type="radio" name="gender" /> Male
+			   <input type="radio" name="gender" /> Female
+			</p>
+		   
+		   <p>
+				<label>Profession: </label>
+				<input type="checkbox" />&nbsp;Web designer
+				<input type="checkbox" />&nbsp;PHP/MySQL developer
+				<input type="checkbox" />&nbsp;jQuery developer
+		   </p>
+		   
+		   
+		   <p>
+				<label for="image">Picture</label><br />
+				<input type="file" id="image" />
+		   
+		   </p>
+		   
+		   <p>
+				<label for"drop_menu">Select your option</label>
+				<select id="drop_menu">
+					<option value="a" >A</option>
+					<option value="b">B</option>
+					<option value="c" selected="selected">C</option>
+				</select>
+		   </p>
+
+		   
+		   <input type="hidden" value="new-user-form" />
+		   <input type="submit" value="Signup" />
+		   
+		</fieldset>
+		
+	</form>
+	
+	
+	
+</body>
+</html>

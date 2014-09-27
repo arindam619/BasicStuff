@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>CSS layout</title>
+	<meta charset="utf-8" />
+	<!--link rel="shortcut icon" href="images/earth.ico" type="image/x-icon"  /-->
+	
+	
+	<style type="text/css">
+	
+		.clearfix {
+			clear: both;
+		}
+	
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.wrapper {
+			
+			border: 1px solid #000;
+			height: 650px;
+			width: 960px;
+			margin: 1em auto;
+		
+		}
+		
+		.header {
+		
+			height: 100px;
+			width: 100%;
+			background: #ddd;
+			
+		}
+		
+		.header p {
+			margin-top: 0;
+		}
+		
+		.head_stuff {
+			padding: 10px;
+		}
+		
+		#nav {
+			background: #000000;
+			color: #FFFFFF;
+			height: 30px;
+			margin-top: 12px;
+		}
+		
+		.sidebar {
+			float: left;
+			width: 260px;
+			height: 350px;
+			padding: 0 10px;
+			background: #D2FFFF;
+		}
+		
+		.content_area {
+			float: left;
+			height: 350px;
+			padding: 0 10px;
+			width: 660px;
+			background: #D3EAD0;
+			
+		}
+		
+		.footer {
+			width: 940px;
+			padding: 10px;
+			background: #ccc;
+		}
+		
+		.footer p {
+			margin: 0;
+			text-align: center;
+		}
+	
+	</style>
+	
+	
+</head>
+
+<body>
+	
+	
+	<div class="wrapper">
+		
+		
+		<div class="header">
+			
+			<div class="head_stuff">
+				<p>Header area</p>
+			</div>
+			
+			<div id="nav">
+				<p>Navigation</p>
+			</div>
+			
+		</div>
+		
+		
+		<div class="main_content">
+		
+			<div class="sidebar">
+				<p>Sidebar content</p>
+			</div>
+		
+			<div class="content_area">
+				<p>Content area</p>
+			</div>
+			
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<div class="footer">
+			<p>Copyright &copy; 2014. All rights reserved</p>
+		</div>
+		
+	</div>
+	
+	
+</body>
+</html>
