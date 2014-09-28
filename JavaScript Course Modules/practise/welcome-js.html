@@ -1,0 +1,156 @@
+<!--updated 22102013-->
+
+<html>
+<head>
+    <title>Welcome to our JavaScript Class</title>
+    <meta charset="utf-8" />
+    
+    <script type="text/javascript">
+        
+        
+        var name = 'This is a string', x = 5, y = 10;
+        
+        
+        //immediately self invoking function
+        //(function() {
+          //  var result = x+y;
+           // document.write("<h1>The result of sum is "+ result +"</h1>");
+        //})();
+        
+        //alert( sum() );
+        
+        //console.log( sum );
+        
+        function sum(x, y){
+            return x + y;
+            
+        }
+        
+        function sub(x, y){
+            return x - y;
+            
+        }
+        
+        function mul(x, y){
+            return x * y;
+            
+        }
+        
+        function div(x, y){
+            return x / y;
+            
+        }
+        
+        function calc(o, x, y) {
+            var resutl;
+            
+//            if ( o == 'add' ) resutl = sum(x, y);
+//            if ( o == 'sub' ) resutl = sub(x, y);
+//            if ( o == 'mul' ) resutl = mul(x, y);
+//            if ( o == 'div' ) resutl = div(x, y);
+            
+            switch (o) {
+                
+                case 'add':
+                    resutl = sum(x, y);
+                    break;
+                  
+                case 'sub':
+                    resutl = sub(x, y);
+                    break;
+                    
+                 case 'mul':
+                    resutl = mul(x, y);
+                    break; 
+                    
+                 case 'div':
+                    resutl = div(x, y);
+                    break;
+                  
+            }
+              
+            
+            alert( 'result: ' + resutl );
+        }
+        
+        
+        
+        
+    </script>
+    
+    
+</head>
+
+<body>
+    
+    <h2>JavaScript practice</h2>
+    
+    <a href="#" onclick="console.log( 'Sum: ' + mul() );">Just click here</a>
+    
+    <br /><br />
+    <script type="text/javascript">
+        
+        
+        //for loop
+        /*
+        for ( var i=0; i<10; i++ ) {
+            
+            if (i==5) {
+                console.log('-------------->');
+                continue;
+            }
+            console.log('running forloop: '+(i++));
+            
+        }
+        */
+        
+        /*
+        var con=0;
+        while ( con<5 ) {
+            console.log( 'running while loop: '+ (con+1) );
+            con++;
+        }
+        
+       
+       var dw=0;
+       do {
+           
+           console.log( 'running do-while loop: '+dw );
+           dw++;
+           
+       } while ( dw<0 );
+        
+       */ 
+    
+        
+        //array
+        
+        //initalized array using constructor function
+        var fruits = new Array('apple', 'banana', 'mango');
+        
+        fruits.push('orange');
+        
+        
+        for (var f=0; f<fruits.length; f++ ) {
+            document.write( fruits[f]+'<br />' );
+        }
+        
+        
+        //initalized array using literal notation
+        var color = ['red', 'blue', 'green'];
+        
+        //array checking
+        if ( fruits instanceof Array ) {
+            //alert('fruit is an of type array');
+        }
+        
+        
+        if ( Array.isArray(fruits) ) {
+            //console.log( 'fruits is array' );
+        }
+        
+    </script>
+    
+</body>
+
+</html>
