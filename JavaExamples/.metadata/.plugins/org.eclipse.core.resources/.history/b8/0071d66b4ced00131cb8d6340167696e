@@ -1,0 +1,217 @@
+package ni;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Album {
+
+	private static final String DB_USER = "test";
+	private static final String DB_PASS = "123456";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
+	private static final String CONN_STR = "jdbc:mysql://localhost/album";
+	
+	Connection conn = null;
+	Statement stmt = null;
+	PreparedStatement pstmt = null;
+	
+	
+	public Album() throws ClassNotFoundException, SQLException {
+		
+		Class.forName(DRIVER);
+		conn = DriverManager.getConnection(CONN_STR, DB_USER, DB_PASS);
+		
+		if (conn == null)
+			System.out.println("Error connecting mysql");
+		
+	}
+	
+	
+	public void viewTitles() throws SQLException {
+		
+		String query = "SELECT * FROM title";
+		StringBuilder output = new StringBuilder();
+		
+		stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(query);
+		
+		String[] result;
+		while ( rs.next() ) {
+			
+			result = new String[3];
+			result[0] = rs.getString("name"); 
+			result[1] = rs.getString("tracks");
+			result[2] = rs.getString("published");
+			
+			printResult(rs.getInt("id"), result);
+			
+			output.append("-----------------------\n");
+			
+		}
+		
+		if (stmt != null)
+			stmt.close();
+		
+		System.out.println(output);
+		
+	}
+	
+	
+	public boolean addTitle(String name, int tracks, String year) throws SQLException {
+		
+		Boolean result = false;
+		
+		String query = "INSERT INTO title (name,tracks,published) VALUES (?,?,?)";
+		
+		if (conn != null) {
+			
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, name);
+			pstmt.setInt(2, tracks);
+			pstmt.setString(3, year);
+			
+			if ( 1 == pstmt.executeUpdate() )
+				result = true;
+			
+			if (pstmt != null)
+				pstmt.close();
+			
+			
+		}
+
+		return result;
+		
+	}
+
+	
+	public String[] getTitleById(int id) throws SQLException {
+		
+		String result[] = null;
+		String query = "SELECT * FROM title WHERE id=?";
+		
+		pstmt = conn.prepareStatement(query);
+		pstmt.setInt(1, id);
+		ResultSet rs = pstmt.executeQuery();
+		
+		if ( rs.next() ) {
+			
+			result = new String[3];
+			result[0] = rs.getString("name"); 
+			result[1] = rs.getString("tracks");
+			result[2] = rs.getString("published");
+			
+			printResult(id, result);
+			
+		}
+		else {
+			System.out.println("Album for id: " + id + " doesn\t exist");
+		}
+		
+		if (pstmt != null)
+			pstmt.close();
+		
+		return result;
+		
+	}
+	
+	
+	public Boolean editRecord(int id, String[] albumData) throws SQLException {
+		
+		Boolean editResult = false;
+		
+		pstmt = conn.prepareStatement("UPDATE title SET name=?,tracks=?,published=? WHERE id=?");
+		pstmt.setString(1, albumData[0]);
+		
+		pstmt.setInt( 2, Integer.parseInt(albumData[1]) );
+		
+		pstmt.setString(3, albumData[2]);
+		pstmt.setInt(4, id);
+		
+		if (1 == pstmt.executeUpdate())
+			editResult = true;
+		
+		if (pstmt != null)
+			pstmt.close();
+		
+		return editResult;
+	}
+	
+	
+	public boolean deleteRecord(int id) throws SQLException {
+		
+		boolean result = false;
+		
+		String query = "DELETE FROM title WHERE id=?";
+		
+		if (conn != null){
+			pstmt = conn.prepareStatement(query);
+		    pstmt.setInt(1, id);
+		    
+		    if ( 1 == pstmt.executeUpdate() )
+				result = true;
+			
+			if (pstmt != null)
+				pstmt.close();
+		}
+
+		return result;
+		
+	}
+
+	public boolean searchRecord(String name) throws SQLException{
+		
+		boolean result = false;
+		ResultSet rs = null;
+		
+		String query = "SELECT tracks,published FROM title WHERE name=?";
+		
+		if (conn != null){
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, name);
+			rs = pstmt.execute();
+			
+			if ( rs != null ) {
+				
+				while (rs.next()) {
+					
+				}
+				
+				
+				result = true;
+			}
+			
+			if (pstmt != null)
+				pstmt.close();
+		}
+		return result;
+	}	
+	
+	
+	private void printResult(int id, String[] result) {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Album found for id: " + id);
+		sb.append("\n-------------------------\n");
+		sb.append("Album name: " + result[0] + "\n");
+		sb.append("Tracks: " + result[1] + "\n");
+		sb.append("Published year: " + result[2] + "\n");
+		
+		System.out.println(sb);
+		
+	}
+	
+	
+	public void cleanUp() throws SQLException {
+		
+		if (conn != null)
+			conn.close();
+		
+	}
+	
+	
+}

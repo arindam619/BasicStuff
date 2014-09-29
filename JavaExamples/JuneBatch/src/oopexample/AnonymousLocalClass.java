@@ -1,0 +1,23 @@
+package oopexample;
+
+public class AnonymousLocalClass {
+	
+	public void runAnonymousLocalClass() {
+		
+		
+		//Anonymous Local Class
+		new Object() {
+			
+			public void output() {
+				
+				System.out.println("Output from Anonymous Local Class.");
+				
+			}
+			
+		}.output();
+		
+		
+	}
+	
+	
+}

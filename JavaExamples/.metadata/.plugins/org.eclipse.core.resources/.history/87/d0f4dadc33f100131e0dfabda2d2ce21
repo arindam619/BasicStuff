@@ -1,0 +1,22 @@
+package oopexample;
+
+public class InnerClassExample {
+	
+	
+	class Inner {
+		
+		public String innerProperty = "Inner class property";
+		
+		public void displayInnerProperty() {
+			System.out.println(innerProperty);
+		}
+		
+	}
+	
+	
+	public void innerClassAccess() {
+		
+	}
+	
+	
+}

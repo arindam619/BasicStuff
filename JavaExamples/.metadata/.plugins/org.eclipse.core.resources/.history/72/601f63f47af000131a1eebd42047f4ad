@@ -1,0 +1,9 @@
+package oopexample;
+
+public interface MyInterface {
+	
+	public int mySum(int a, int b);
+	
+	public int div(int a, int b);
+	
+}

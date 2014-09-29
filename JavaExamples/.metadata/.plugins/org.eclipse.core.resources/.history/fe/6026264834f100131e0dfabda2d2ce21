@@ -1,0 +1,24 @@
+package oopexample;
+
+public class LocalClassExample {
+
+	
+	public void runLocalClass() {
+		
+		
+		class Local {
+			
+			public String localProperty = "Inner class property";
+			
+			public void displayInnerProperty() {
+				System.out.println(innerProperty);
+			}
+			
+		}
+		
+		
+		
+	}
+	
+	
+}

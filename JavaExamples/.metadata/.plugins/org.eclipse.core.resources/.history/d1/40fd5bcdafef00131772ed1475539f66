@@ -1,0 +1,18 @@
+package oopexample;
+
+public class MyIdeas extends RawIdeas {
+
+	@Override
+	public int myCalculation(int a, int b) {
+		return (a+b)*10;
+	}
+	
+	@Override
+	public void classInfo() {
+		
+		super.classInfo();
+		System.out.println("Now its MyIdeas");
+		
+	}
+
+}

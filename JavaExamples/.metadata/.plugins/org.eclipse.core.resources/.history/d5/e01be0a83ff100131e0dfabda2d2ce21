@@ -1,0 +1,23 @@
+package basic;
+
+public class StringExample {
+	
+	
+	public void runStrExample() {
+		
+		
+		//String greet = new String("Hello world...");
+		String greet = "hello";
+		if (greet=="hello"){
+			System.out.println("String present");
+		}
+		else
+			System.out.println("String is not present");
+		
+		
+		//System.out.println(greet);
+		
+	}
+	
+	
+}

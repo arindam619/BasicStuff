@@ -1,0 +1,11 @@
+package oopexample;
+
+public interface MyInterface {
+	
+	public String version;
+	
+	public int mySum(int a, int b);
+	
+	public int div(int a, int b);
+	
+}

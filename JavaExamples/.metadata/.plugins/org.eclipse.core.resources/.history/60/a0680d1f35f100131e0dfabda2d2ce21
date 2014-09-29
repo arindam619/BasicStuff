@@ -1,0 +1,17 @@
+package oopexample;
+
+public class AnonymousLocalClass {
+	
+	public void runAnonymousLocalClass() {
+		
+		
+		new Object() {
+			
+		};
+		
+		
+		
+	}
+	
+	
+}

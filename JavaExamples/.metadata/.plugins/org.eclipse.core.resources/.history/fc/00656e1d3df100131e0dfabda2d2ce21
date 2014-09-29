@@ -1,0 +1,16 @@
+package basic;
+
+public class StringExample {
+	
+	
+	public void runStrExample() {
+		
+		
+		String greet = "Hello world...";
+		
+		
+		
+	}
+	
+	
+}

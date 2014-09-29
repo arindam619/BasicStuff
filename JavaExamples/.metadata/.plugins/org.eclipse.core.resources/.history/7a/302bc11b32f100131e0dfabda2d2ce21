@@ -1,0 +1,8 @@
+package oopexample;
+
+public interface Notification {
+
+	public void display(String message);
+	
+	
+}

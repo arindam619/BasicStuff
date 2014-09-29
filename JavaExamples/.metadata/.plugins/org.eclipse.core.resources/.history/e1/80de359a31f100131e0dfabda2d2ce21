@@ -1,0 +1,8 @@
+package oopexample;
+
+public interface Notification {
+
+	
+	
+	
+}

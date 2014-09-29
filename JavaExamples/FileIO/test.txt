@@ -1,0 +1,5 @@
+Pinku : Math : 55
+Rinku : Chemistry : 65
+Rahul : PPL : 78
+Tulip : PHP : 57
+

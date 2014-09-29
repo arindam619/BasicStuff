@@ -1,0 +1,19 @@
+package basic;
+
+import java.util.Scanner;
+
+public class ConsoleInput {
+	
+	private Scanner input1, input2, input;
+	
+	
+	public ConsoleInput() {
+		
+		
+		
+		
+		
+	}
+	
+	
+}

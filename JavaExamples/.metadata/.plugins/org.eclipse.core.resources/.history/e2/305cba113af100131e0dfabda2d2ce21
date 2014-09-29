@@ -1,0 +1,114 @@
+package basic;
+
+import oopexample.AnonymousLocalClass;
+ 
+public class RunExample {
+
+	public static void main(String[] args) {
+		
+		//conditionalExample ce = new conditionalExample();
+		//ce.testCondition();
+		
+		//LoopTest lt = new LoopTest();		
+		//lt.studyLoops();
+				
+		//ArrayTest at = new ArrayTest();
+		//at.nestedExample();
+		
+		
+//		ClassStudy cs1 = new ClassStudy("Learning Java is a fun");
+//		ClassStudy cs2 = new ClassStudy("Learning PHP is great");
+//		
+//		cs1.greetMe();
+//		cs2.greetMe();
+		
+		
+//		Banking account1 = new Banking("Pinku", 5000);
+//		account1.myInfo();
+//		
+//		account1.setBalance(3000);
+//		account1.myInfo();
+//		
+//		int amt = 8500;
+//		
+//		if ( account1.widthraw(amt) )
+//			System.out.println("Amount successfully withdrawn: " + amt);
+//		else
+//			System.out.println("Withdrawn failed");
+//		
+//		account1.myInfo();
+		
+		
+//		OOP1 oop = new OOP1("test", 123456);
+//		
+//		System.out.println( "Name: " + oop.getName() );
+//		System.out.println( "Ph: " + oop.getphoneNum() );
+//		
+//		oop.setName("Rinku");
+//		oop.setphoneNum(98640);
+//		
+//		System.out.println( "Name: " + oop.getName() );
+//		System.out.println( "Ph: " + oop.getphoneNum() );
+//		
+//		
+//		System.out.println( oop );
+		
+//		B b = new B(100);
+//		
+//		b.displayMessage();
+//		
+//		System.out.println("Num value: " + b.num);
+//		
+//		if ( b instanceof B )
+//			System.out.println("b is an object of B");
+//		
+//		if (b instanceof A)
+//			System.out.println("b is also an object of A");
+		
+//		MyIdeas myIdeas = new MyIdeas();
+//		
+//		int result = myIdeas.myCalculation(2,5);
+//		System.out.println(result);
+//		
+//		myIdeas.classInfo();
+		
+//		MethodOverloadingExample overload = new MethodOverloadingExample();
+//		int result = overload.sum(3,4);
+//		int sumresult = overload.sum(2,4,5);
+//		System.out.println(result);
+//		System.out.println(sumresult);
+		
+		//Anonymous class
+		/*
+		MyNotification notice = new MyNotification() {
+			
+			@Override
+			public void display(String message) {
+				System.out.println(message);
+			}
+			
+		};
+		
+		notice.display("My notice from Anonymous class!");
+		*/
+		
+		
+//		InnerClassExample ice = new InnerClassExample();
+//		ice.innerClassAccess();
+		
+//		LocalClassExample lce = new LocalClassExample();
+//		lce.runLocalClass();
+		
+		
+//		AnonymousLocalClass alc = new AnonymousLocalClass();
+//		alc.runAnonymousLocalClass();
+		
+		//new AnonymousLocalClass().runAnonymousLocalClass();
+		
+		
+		
+		
+	}
+	
+
+}

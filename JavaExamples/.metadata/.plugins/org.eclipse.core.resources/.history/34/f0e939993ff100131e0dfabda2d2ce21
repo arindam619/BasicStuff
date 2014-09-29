@@ -1,0 +1,18 @@
+package basic;
+
+public class StringExample {
+	
+	
+	public void runStrExample() {
+		
+		
+		//String greet = new String("Hello world...");
+		String greet = "hello";
+		
+		
+		System.out.println(greet);
+		
+	}
+	
+	
+}

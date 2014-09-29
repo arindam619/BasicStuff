@@ -1,0 +1,39 @@
+package basic;
+
+public class StringExample {
+	
+	
+	public void runStrExample() {
+		
+		
+		//String greet = new String("Hello world...");
+		String greet = "Hello";
+		
+//		if ( greet.equalsIgnoreCase("HELLO") ) {
+//			System.out.println("hello is present");
+//		}
+//		else
+//			System.out.println("hello is not present");
+		
+		
+		//System.out.println(greet);
+		
+		
+//		if ( greet.isEmpty() )
+//			System.out.println("String is empty");
+//		else {
+//			System.out.println( greet );
+//			System.out.println( "length: " + greet.length() );
+//		}
+		
+		
+		String myText = "Hello";
+		myText += " World.";
+		
+		
+		
+		
+	}
+	
+	
+}

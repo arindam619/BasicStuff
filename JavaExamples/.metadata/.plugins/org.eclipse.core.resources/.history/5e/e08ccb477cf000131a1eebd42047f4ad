@@ -1,0 +1,15 @@
+package oopexample;
+
+public class MyTools implements MyInterface {
+
+	@Override
+	public int mySum(int x, int y) {
+		return 0;
+	}
+
+	@Override
+	public int div(int x, int y) {
+		return 0;
+	}
+
+}

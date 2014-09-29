@@ -1,0 +1,13 @@
+package oopexample;
+
+public class InnerClassExample {
+	
+	
+	class Inner {
+		
+	}
+	
+	
+	
+	
+}

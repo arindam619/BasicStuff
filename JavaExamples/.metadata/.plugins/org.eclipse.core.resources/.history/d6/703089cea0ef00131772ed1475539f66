@@ -1,0 +1,10 @@
+package oopexample;
+
+public class OOP1 {
+
+	
+	private String name;
+	private int phoneNum;
+	
+	
+}

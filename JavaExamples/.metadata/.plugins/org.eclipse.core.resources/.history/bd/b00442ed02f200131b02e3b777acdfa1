@@ -1,0 +1,17 @@
+package basic;
+
+public class ConsoleInput {
+	
+	private Scanner input1, input2, input;
+	
+	
+	public ConsoleInput() {
+		
+		
+		
+		
+		
+	}
+	
+	
+}

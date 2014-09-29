@@ -1,0 +1,17 @@
+
+Prepare a data structure containing sentence's code with their respective fields 
+
+Check & load GPS data file
+
+Read file & loop through it line by line
+
+Extract a line of string using "," as delimiter
+
+First element in the extracted string denotes NMEA sentence id which we use to get the field name from 
+our above prepared data structure.
+
+The parse string values are placed with respect to the field  
+
+
+
+ripunjaysarma@gmail.com
